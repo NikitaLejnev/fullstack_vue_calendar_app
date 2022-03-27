@@ -13,4 +13,9 @@ export const store = {
       dayObj.id === dayId ? (dayObj.active = true) : (dayObj.active = false);
     });
   },
+  submitEvent(eventDetails) {
+    const activeDay = this.getActiveDay();
+    const newEvent = { details: eventDetails, edit: false };
+    activeDay.events.push(newEvent);
+  },
 };
