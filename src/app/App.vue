@@ -8,8 +8,9 @@
             <div class="day-number">1</div>
             <div class="day-event" style="background-color: rgb(153, 255, 153)">
               <div>
-                <span class="has-text-centered details">Get Groceries</span> 
-                <div class="has-text-centered icons"><i class="fa fa-pencil-square edit-icon"></i> 
+                <span class="has-text-centered details">Get Groceries</span>
+                <div class="has-text-centered icons">
+                  <i class="fa fa-pencil-square edit-icon"></i>
                   <i class="fa fa-trash-o delete-icon"></i>
                 </div>
               </div>
@@ -40,8 +41,11 @@
             <div class="day-number">5</div>
             <div class="day-event" style="background-color: rgb(255, 153, 153)">
               <div>
-                <span class="has-text-centered details">Friday dinner/drinks</span> 
-                <div class="has-text-centered icons"><i class="fa fa-pencil-square edit-icon"></i> 
+                <span class="has-text-centered details"
+                  >Friday dinner/drinks</span
+                >
+                <div class="has-text-centered icons">
+                  <i class="fa fa-pencil-square edit-icon"></i>
                   <i class="fa fa-trash-o delete-icon"></i>
                 </div>
               </div>
@@ -65,7 +69,9 @@
     <div id="calendar-entry">
       <div class="calendar-entry-note">
         <input type="text" placeholder="New Event" />
-        <p class="calendar-entry-day">Day of event: <span class="bold">Monday</span></p>
+        <p class="calendar-entry-day">
+          Day of event: <span class="bold">Monday</span>
+        </p>
         <a class="button is-primary is-small is-outlined">Submit</a>
       </div>
     </div>
@@ -74,12 +80,14 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App",
+};
 </script>
 
 <style lang="scss">
-html, body, #app {
+html,
+body,
+#app {
   height: 100%;
 }
 
@@ -100,20 +108,20 @@ html, body, #app {
   }
 
   .day {
-    background-color: #4A4A4A;
-    color: #FFF;
-    border-left: 1px solid #8F8F8F;
-    border-bottom: 1px solid #8F8F8F;
+    background-color: #4a4a4a;
+    color: #fff;
+    border-left: 1px solid #8f8f8f;
+    border-bottom: 1px solid #8f8f8f;
     font-size: 12px;
     cursor: pointer;
 
     &:hover {
-      background: darken(#4A4A4A,3%);
+      background: darken(#4a4a4a, 3%);
     }
 
     .day-banner {
       background-color: #333333;
-      color: #FFF;
+      color: #fff;
       padding: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -128,7 +136,7 @@ html, body, #app {
         margin-top: 6px;
         margin-bottom: 6px;
         display: block;
-        color: #4C4C4C;
+        color: #4c4c4c;
         padding: 5px;
 
         .details {
@@ -142,7 +150,7 @@ html, body, #app {
         input {
           background: none;
           border: 0;
-          border-bottom: 1px solid #FFF;
+          border-bottom: 1px solid #fff;
           width: 100%;
 
           &:focus {
@@ -153,48 +161,7 @@ html, body, #app {
     }
 
     &:last-child {
-      border-right: 1px solid #8F8F8F;
-    }
-  }
-}
-
-#calendar-entry {
-  background: #FFF;
-  border: 1px solid #42b883;
-  border-radius: 10px;
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 20px;
-
-  .calendar-entry-note {
-    input {
-      width: 200px;
-      font-weight: 600;
-      border: 0;
-      border-bottom: 1px solid #CCC;
-      font-size: 15px;
-      height: 30px;
-      margin-bottom: 10px;
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    .calendar-entry-day {
-      color: #42b883;
-      font-size: 12px;
-      margin-bottom: 10px;
-      padding-bottom: 5px;
-
-      .bold {
-        font-weight: 600;
-      }
-    }
-
-    .submit {
-      display: block;
-      margin: 0 auto;
+      border-right: 1px solid #8f8f8f;
     }
   }
 }
