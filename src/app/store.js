@@ -1,7 +1,8 @@
+import { reactive } from "vue";
 import { seedData } from "./seed";
 
 export const store = {
   state: {
-    data: seedData,
+    data: reactive(seedData),
   },
 };
