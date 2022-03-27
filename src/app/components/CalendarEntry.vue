@@ -3,7 +3,7 @@
     <div class="calendar-entry-note">
       <input type="text" placeholder="New Event" />
       <p class="calendar-entry-day">
-        Day of event: <span class="bold">Monday</span>
+        Day of event: <span class="bold">{{ titleOfActiveDay }}</span>
       </p>
       <a class="button is-primary is-small is-outlined">Submit</a>
     </div>
@@ -11,8 +11,15 @@
 </template>
 
 <script>
+import { store } from "../store";
+
 export default {
   name: "CalendarEntry",
+  computed: {
+    titleOfActiveDay() {
+      return store.getActiveDay().fullTitle;
+    },
+  },
 };
 </script>
 
