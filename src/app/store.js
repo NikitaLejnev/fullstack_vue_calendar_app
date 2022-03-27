@@ -18,4 +18,11 @@ export const store = {
     const newEvent = { details: eventDetails, edit: false };
     activeDay.events.push(newEvent);
   },
+  editEvent(dayId, eventDetails) {
+    const dayObj = this.state.data.find((day) => dayId === day.id);
+    const eventObj = dayObj.events.find(
+      (event) => event.details === eventDetails
+    );
+    eventObj.edit = true;
+  },
 };
