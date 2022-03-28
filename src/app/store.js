@@ -33,4 +33,12 @@ export const store = {
       })
     );
   },
+  updateEvent(dayId, originalEventDetails, newEventDetails) {
+    const dayObj = this.state.data.find((day) => dayId === day.id);
+    const eventObj = dayObj.events.find(
+      (event) => event.details === originalEventDetails
+    );
+    eventObj.details = newEventDetails;
+    eventObj.edit = false;
+  },
 };
