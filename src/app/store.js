@@ -35,12 +35,15 @@ export const store = {
     eventObj.details = newEventDetails;
     eventObj.edit = false;
   },
+  getDayObj(dayId) {
+    return this.state.data.find((day) => dayId === day.id);
+  },
   getEventObj(dayId, eventDetails) {
-    const dayObj = this.state.data.find((day) => dayId === day.id);
+    const dayObj = this.getDayObj(dayId);
     return dayObj.events.find((event) => event.details === eventDetails);
   },
   deleteEvent(dayId, eventDetails) {
-    const dayObj = this.state.data.find((day) => day.id === dayId);
+    const dayObj = this.getDayObj(dayId);
     const eventIndexToRemove = dayObj.events.findIndex(
       (event) => event.details === eventDetails
     );
